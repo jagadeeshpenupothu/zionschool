@@ -2,14 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: true
 publish_mode: editorial_workflow
 
 media_folder: public/assets/uploads
 public_folder: /assets/uploads
 
-site_url: https://zionschool.pages.dev
-display_url: https://zionschool.pages.dev
+site_url: https://zionedu.netlify.app
+display_url: https://zionedu.netlify.app
 logo_url: /favicon.svg
 
 slug:
