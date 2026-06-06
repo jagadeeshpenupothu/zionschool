@@ -13,6 +13,7 @@ const {
   description = site.tagline
 } = Astro.props;
 
+const navigationItems = Array.isArray(navigation) ? navigation : navigation.items ?? [];
 const pageTitle = title === site.schoolName ? title : `${title} | ${site.schoolName}`;
 const c = theme.colors;
 const themeStyle = `
@@ -61,10 +62,10 @@ const themeStyle = `
   </head>
   <body style={themeStyle}>
     <a class="skip-link" href="#main">{site.labels.skipLink}</a>
-    {sections.navbar?.enabled !== false && <Navbar site={site} navigation={navigation} />}
+    {sections.navbar?.enabled !== false && <Navbar site={site} navigation={navigationItems} />}
     <main id="main">
       <slot />
     </main>
-    {sections.footer?.enabled !== false && <Footer data={footer} site={site} navigation={navigation} />}
+    {sections.footer?.enabled !== false && <Footer data={footer} site={site} navigation={navigationItems} />}
   </body>
 </html>
