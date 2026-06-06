@@ -1,0 +1,330 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "Identity, Contact, Logo"
+        file: "src/data/site.json"
+        fields:
+          - { label: "School Name", name: "schoolName", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - label: "Logo"
+            name: "logo"
+            widget: "object"
+            fields:
+              - { label: "Text Mark", name: "text", widget: "string", required: false }
+              - { label: "Logo Image", name: "image", widget: "image", required: false }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+          - { label: "Favicon", name: "favicon", widget: "image", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Hours", name: "hours", widget: "string" }
+          - label: "Social Links"
+            name: "social"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+      - name: "theme"
+        label: "Theme Colors"
+        file: "src/data/theme.json"
+        fields:
+          - label: "Colors"
+            name: "colors"
+            widget: "object"
+            fields:
+              - { label: "Primary", name: "primary", widget: "color" }
+              - { label: "Primary Dark", name: "primaryDark", widget: "color" }
+              - { label: "Primary Deep", name: "primaryDeep", widget: "color" }
+              - { label: "Secondary", name: "secondary", widget: "color" }
+              - { label: "Accent", name: "accent", widget: "color" }
+              - { label: "Highlight", name: "highlight", widget: "color" }
+              - { label: "Paper", name: "paper", widget: "color" }
+              - { label: "Soft Background", name: "soft", widget: "color" }
+              - { label: "Text", name: "ink", widget: "color" }
+              - { label: "Muted Text", name: "muted", widget: "color" }
+              - { label: "Line", name: "line", widget: "color" }
+              - { label: "Navbar Background", name: "navbarBackground", widget: "color" }
+              - { label: "Navbar Text", name: "navbarText", widget: "color" }
+              - { label: "Footer Background", name: "footerBackground", widget: "color" }
+      - name: "sections"
+        label: "Section Visibility"
+        file: "src/data/sections.json"
+        fields:
+          - label: "Navbar"
+            name: "navbar"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Features"
+            name: "features"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Courses"
+            name: "courses"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Events"
+            name: "events"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Staff"
+            name: "staff"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Statistics"
+            name: "statistics"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "src/data/home.json"
+        fields:
+          - label: "Page Meta"
+            name: "page"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Background Image", name: "backgroundImage", widget: "image" }
+              - label: "Buttons"
+                name: "buttons"
+                widget: "list"
+                fields:
+                  - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "href", widget: "string" }
+                  - { label: "Style", name: "style", widget: "select", options: ["primary", "light"] }
+              - label: "Highlights"
+                name: "highlights"
+                widget: "list"
+                fields:
+                  - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string", required: false }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+      - name: "about"
+        label: "About Page"
+        file: "src/data/about.json"
+        fields:
+          - { label: "Page", name: "page", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Description", name: "description", widget: "text" }] }
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Enabled", name: "enabled", widget: "boolean", default: true }, { label: "Eyebrow", name: "eyebrow", widget: "string" }, { label: "Title", name: "title", widget: "string" }, { label: "Text", name: "text", widget: "text" }] }
+          - { label: "Story", name: "story", widget: "object", fields: [{ label: "Enabled", name: "enabled", widget: "boolean", default: true }, { label: "Eyebrow", name: "eyebrow", widget: "string" }, { label: "Title", name: "title", widget: "string" }, { label: "Text", name: "text", widget: "text" }, { label: "Body", name: "body", widget: "text" }] }
+      - name: "contact"
+        label: "Contact Page"
+        file: "src/data/contact.json"
+        fields:
+          - { label: "Page", name: "page", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Description", name: "description", widget: "text" }] }
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Enabled", name: "enabled", widget: "boolean", default: true }, { label: "Eyebrow", name: "eyebrow", widget: "string" }, { label: "Title", name: "title", widget: "string" }, { label: "Text", name: "text", widget: "text" }] }
+          - { label: "Form", name: "form", widget: "object", fields: [{ label: "Enabled", name: "enabled", widget: "boolean", default: true }, { label: "Submit Label", name: "submitLabel", widget: "string" }] }
+      - name: "subpages"
+        label: "Courses, Events, Gallery, Teachers Pages"
+        file: "src/data/pages.json"
+        fields:
+          - { label: "Courses Page", name: "courses", widget: "object" }
+          - { label: "Events Page", name: "events", widget: "object" }
+          - { label: "Gallery Page", name: "gallery", widget: "object" }
+          - { label: "Teachers Page", name: "teachers", widget: "object" }
+      - name: "footer"
+        label: "Footer"
+        file: "src/data/footer.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Columns"
+            name: "columns"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Type", name: "type", widget: "select", options: ["navigation", "contact", "social", "custom"] }
+      - name: "navigation"
+        label: "Navigation"
+        file: "src/data/navigation.json"
+        fields:
+          - label: "Links"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "href", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+
+  - name: "collections"
+    label: "Reusable Content"
+    files:
+      - name: "courses"
+        label: "Courses"
+        file: "src/data/courses.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Level", name: "level", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - name: "events"
+        label: "Events"
+        file: "src/data/events.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Time", name: "time", widget: "string", required: false }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+      - name: "features"
+        label: "Features"
+        file: "src/data/features.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+      - name: "gallery"
+        label: "Gallery"
+        file: "src/data/gallery.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+      - name: "staff"
+        label: "Staff"
+        file: "src/data/staff.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string", required: false }
+      - name: "statistics"
+        label: "Statistics"
+        file: "src/data/stats.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "src/data/testimonials.json"
+        fields:
+          - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string", required: false }
