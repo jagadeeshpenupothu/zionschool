@@ -1,18 +1,99 @@
 {
+  "staff": {
+    "enabled": true,
+    "eyebrow": "Faculty",
+    "title": "Experienced educators and mentors",
+    "text": "Teachers combine subject expertise with care, structure, and curiosity.",
+    "limit": 3
+  },
+  "statistics": {
+    "enabled": true
+  },
+  "about": {
+    "enabled": true,
+    "eyebrow": "About our school",
+    "title": "Learning that feels rigorous, human, and connected to real life.",
+    "text": "Zion International School is designed for families who want academic strength without losing warmth, creativity, and personal attention. Students learn through clear instruction, thoughtful projects, and meaningful community life.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=82",
+      "alt": "Students learning together on campus"
+    },
+    "buttons": [
+      {
+        "enabled": true,
+        "label": "Our Story",
+        "href": "/about/",
+        "style": "primary"
+      }
+    ]
+  },
   "page": {
-    "title": "Zion International School",
+    "title": "Zion Public School",
     "description": "Future-ready learning with strong values."
+  },
+  "cta": {
+    "enabled": true,
+    "eyebrow": "Start the conversation",
+    "title": "Discover whether Zion is the right fit for your family.",
+    "text": "Schedule a tour, ask about admissions, or request program details from our enrollment team.",
+    "buttons": [
+      {
+        "enabled": true,
+        "label": "Contact Admissions",
+        "href": "/contact/",
+        "style": "light"
+      }
+    ]
+  },
+  "gallery": {
+    "enabled": true,
+    "eyebrow": "Campus life",
+    "title": "Moments from our learning community",
+    "text": "Classrooms, labs, arts, athletics, and student-led experiences.",
+    "limit": 4
+  },
+  "testimonials": {
+    "enabled": true,
+    "eyebrow": "Community voices",
+    "title": "Trusted by students and families",
+    "text": "Real stories from the people who know the school best.",
+    "ariaLabel": "Testimonials"
+  },
+  "courses": {
+    "enabled": true,
+    "eyebrow": "Academic pathways",
+    "title": "Programs for every stage",
+    "text": "A clear progression from early foundations to college and career readiness.",
+    "limit": 3
+  },
+  "events": {
+    "enabled": true,
+    "eyebrow": "Upcoming events",
+    "title": "Visit, connect, and celebrate",
+    "text": "Key dates for prospective families, students, and the wider community.",
+    "limit": 2
   },
   "hero": {
     "enabled": true,
-    "eyebrow": "Admissions open for 2026",
-    "title": "Learning Today, Leading Tomorrow.",
-    "text": "Zion International School blends strong academics, caring teachers, and enriching activities so every child grows with confidence and character.",
-    "backgroundImage": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=84",
     "buttons": [
-      { "enabled": true, "label": "Schedule a School Visit", "href": "/contact/", "style": "primary" },
-      { "enabled": true, "label": "Explore Classes", "href": "/courses/", "style": "light" }
+      {
+        "enabled": true,
+        "label": "Schedule a School Visit",
+        "href": "/contact/",
+        "style": "primary"
+      },
+      {
+        "enabled": true,
+        "label": "Explore Classes",
+        "href": "/courses/",
+        "style": "light"
+      }
     ],
+    "eyebrow": "Admissions open for 2026",
+    "backgroundImage": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=84",
+    "text": "Zion International School blends strong academics, caring teachers, and enriching activities so every child grows with confidence and character.",
+    "statisticsLabel": "School statistics",
+    "highlightsLabel": "School highlights",
     "controls": {
       "enabled": true,
       "ariaLabel": "Hero image controls",
@@ -21,8 +102,7 @@
       "previousText": "<",
       "nextText": ">"
     },
-    "statisticsLabel": "School statistics",
-    "highlightsLabel": "School highlights",
+    "title": "Learning Today, Leading Tomorrow.",
     "highlights": [
       {
         "enabled": true,
@@ -47,70 +127,10 @@
       }
     ]
   },
-  "about": {
-    "enabled": true,
-    "eyebrow": "About our school",
-    "title": "Learning that feels rigorous, human, and connected to real life.",
-    "text": "Zion International School is designed for families who want academic strength without losing warmth, creativity, and personal attention. Students learn through clear instruction, thoughtful projects, and meaningful community life.",
-    "image": {
-      "src": "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1400&q=82",
-      "alt": "Students learning together on campus"
-    },
-    "buttons": [
-      { "enabled": true, "label": "Our Story", "href": "/about/", "style": "primary" }
-    ]
-  },
   "features": {
     "enabled": true,
     "eyebrow": "Why families choose us",
     "title": "A school environment built for growth",
     "text": "Premium learning support, modern spaces, and a culture where every student is known."
-  },
-  "courses": {
-    "enabled": true,
-    "eyebrow": "Academic pathways",
-    "title": "Programs for every stage",
-    "text": "A clear progression from early foundations to college and career readiness.",
-    "limit": 3
-  },
-  "statistics": {
-    "enabled": true
-  },
-  "staff": {
-    "enabled": true,
-    "eyebrow": "Faculty",
-    "title": "Experienced educators and mentors",
-    "text": "Teachers combine subject expertise with care, structure, and curiosity.",
-    "limit": 3
-  },
-  "testimonials": {
-    "enabled": true,
-    "eyebrow": "Community voices",
-    "title": "Trusted by students and families",
-    "text": "Real stories from the people who know the school best.",
-    "ariaLabel": "Testimonials"
-  },
-  "gallery": {
-    "enabled": true,
-    "eyebrow": "Campus life",
-    "title": "Moments from our learning community",
-    "text": "Classrooms, labs, arts, athletics, and student-led experiences.",
-    "limit": 4
-  },
-  "events": {
-    "enabled": true,
-    "eyebrow": "Upcoming events",
-    "title": "Visit, connect, and celebrate",
-    "text": "Key dates for prospective families, students, and the wider community.",
-    "limit": 2
-  },
-  "cta": {
-    "enabled": true,
-    "eyebrow": "Start the conversation",
-    "title": "Discover whether Zion is the right fit for your family.",
-    "text": "Schedule a tour, ask about admissions, or request program details from our enrollment team.",
-    "buttons": [
-      { "enabled": true, "label": "Contact Admissions", "href": "/contact/", "style": "light" }
-    ]
   }
 }
