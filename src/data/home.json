@@ -61,7 +61,7 @@
   },
   "courses": {
     "enabled": true,
-    "eyebrow": "Academic pathways",
+    "eyebrow": "Academic pathway",
     "title": "Programs for every stage",
     "text": "A clear progression from early foundations to college and career readiness.",
     "limit": 3
@@ -89,7 +89,7 @@
         "style": "light"
       }
     ],
-    "eyebrow": "Admissions open for 2027",
+    "eyebrow": "Admissions open for 1999",
     "backgroundImage": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1800&q=84",
     "text": "Zion International School blends strong academics, caring teachers, and enriching activities so every child grows with confidence and character.",
     "statisticsLabel": "School statistics",
@@ -102,7 +102,7 @@
       "previousText": "<",
       "nextText": ">"
     },
-    "title": "Learning Today, Leading Tomorrow.",
+    "title": "Learn Today Lead Tomorrow",
     "highlights": [
       {
         "enabled": true,
